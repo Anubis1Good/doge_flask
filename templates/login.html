@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% if error == 'login' %}
+<p class="error">Пользователь не найден!</p>
+{% else %}
+{% endif%}
+{% if error == 'password' %}
+<p class="error">Логин неверный!</p>
+{% else %}
+{% endif%}
+<form class="form__login" action="/login" method="post">
+    <label class="form__text" for="name">Логин:</label>   
+    <input class="form__input" type="text" name="name">
+    <label class="form__text" for="password">Пароль:</label>
+    <input class="form__input" type="password" name="password">
+    <input class="form__btn" type="submit" value="Войти">
+    <input class="form__btn" type="button" value="Регистрация" onclick="document.location.href='/registration'">
+</form>
+
+{% endblock content%}

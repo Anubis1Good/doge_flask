@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{ title}}</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    </head>
+    <body>
+        <header class="header">
+            <nav class="menu">
+                <img class="menu__logo" src="{{url_for('static', filename='imgs/logo.png')}}" alt="">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="/">Главная</a></li>
+                    <li class="menu__item"><a href="/users">Все пользователи</a></li>
+                    {% if name%}
+                    <li class="menu__item flex"><a href="/user/{{name}}">{{name}}</a><button class="menu__logout" onclick="document.location.href='/exit'"></button></li>
+                    {% else %}
+                    <li class="menu__item"><a href="/login">Войти</a></li>
+                    {% endif %}
+                </ul>   
+            </nav>
+        </header>
+        <main class="main">
+            {% block content %}
+            {{ content }}
+            {% endblock content %}
+
+        </main>
+        <footer class="footer"></footer>
+    </body>
+</html>

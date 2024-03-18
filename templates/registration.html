@@ -1,0 +1,22 @@
+{% extends "base.html" %} {% block content %}
+<form class="form__login" action="/registration" method="post">
+    <label class="form__text" for="login">Логин:</label>
+    <input class="form__input" type="text" name="login" />
+    <label class="form__text" for="name">Имя:</label>
+    <input class="form__input" type="text" name="name" />
+    <label class="form__text" for="password">Пароль:</label>
+    <input class="form__input" type="password" name="password" />
+    <label class="form__text" for="password2">Пароль еще раз:</label>
+    <input class="form__input" type="password" name="password2" />
+    <label class="form__text" for="photo">Ссылка на фото:</label>
+    <input class="form__input" type="text" name="photo" />
+    <input class="form__btn" type="submit" value="Зарегистрировать" />
+    <input
+        class="form__btn"
+        type="button"
+        value="Назад"
+        onclick="document.location.href='/login'"
+    />
+</form>
+
+{% endblock content%}

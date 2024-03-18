@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="users">
+    {% for user in users %}
+        <div class="user">
+            <img class="user__photo" src="{{ user[2] }}" alt="">
+            <p class="user__name">{{ user[1] }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock content%}

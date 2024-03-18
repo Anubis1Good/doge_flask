@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Press+Start+2P&display=swap');
+* {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+}
+body{
+    /* background-image: url('https://vignette.wikia.nocookie.net/meme/images/a/a9/Rageinsanity.png/revision/latest?cb=20120329230402');
+    background-size: cover; */
+    background-color: #4C036E;
+    margin: 0;
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+.header {
+    background: #F9FE40;
+    height: 80px;
+    
+}
+.menu {
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    gap: 30%;
+}
+.menu__logo {
+    
+    height: 80%;
+}
+.menu__logo:hover{
+    animation: rotateLogo 2s linear infinite;
+}
+.menu__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+    width: 50%;
+    
+}
+.menu__item {
+    color: #4C036E;
+    font-size: 1em;
+}
+.menu__item:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: .25em;
+}
+.menu__logout{
+    
+    width: 3em;
+    height: 3em;
+    background-color: #F9FE40;
+    border: none;
+    background-image: url(../imgs/logout.png);
+    background-size: contain;
+    transition: transform 1s;
+    
+}
+.menu__logout:hover{
+    transition: 1s;
+    transform: rotate(90deg);
+    
+}
+
+
+.main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: 0 auto;
+}
+.users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+.user {
+    background-color:#7608AA;
+    border: 1px solid #F7FE00;
+}
+.user__photo {
+    width: 100%;
+    height: 80%;
+}
+.user__name {
+    color: #F7FE00;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.form__login {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    width: 50%;
+    
+}
+.form__text {
+    color: #F7FE00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form__input {
+    padding: 1em;
+    background-color: #F7FE00;
+    border: none;
+    color: #7608AA;
+}
+
+.form__btn {
+    color: #F7FE00;
+    background-color: #7608AA;
+    border-radius: .1em;
+    border: none;
+    padding: 1em;
+    font-size: 1em;
+}
+
+.footer {
+    background: #F9FE40;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+
+.error {
+    color: red;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: .4em;
+
+}
+
+@keyframes rotateLogo {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
+}
